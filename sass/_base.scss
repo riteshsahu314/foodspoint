@@ -1,0 +1,21 @@
+/* CSS GLOBAL RESETS */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* PAGE WIDE DEFINITIONS */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    color: $color-grey-dark-3;
+    line-height: 1.6;
+}
