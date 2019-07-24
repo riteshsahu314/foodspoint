@@ -25,11 +25,38 @@ body {
   font-size: 8rem;
   letter-spacing: 1px; }
 
+.heading-2 {
+  font-family: "Merienda", cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-align: center; }
+  .heading-2::after {
+    content: "";
+    display: block;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #42c500 50%, rgba(255, 255, 255, 0) 100%);
+    height: 2px;
+    width: 25rem;
+    margin: 0 auto;
+    margin-top: 2rem; }
+
 .heading-3 {
   font-family: "Merienda", cursive;
   font-size: 3.5rem;
   font-weight: 300;
   margin-bottom: 1.5rem; }
+
+.heading-4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem; }
+
+.long-copy {
+  font-size: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 3.5rem; }
 
 .text-center {
   text-align: center; }
@@ -57,7 +84,11 @@ body {
 
 .section {
   width: 100%;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  border-bottom: 1px solid black; }
+
+.section-features {
+  padding: 5rem 0rem; }
 
 /* ------------------------------- */
 /* Section Home */
@@ -138,3 +169,18 @@ body {
 
 .app-refer__btn:not(:last-child) {
   margin-right: 3rem; }
+
+.features {
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 4rem;
+  margin: 0 6rem; }
+  .features__box {
+    font-size: 1.8rem; }
+    .features__box__icon {
+      display: block;
+      height: 7rem;
+      width: 7rem;
+      margin-bottom: 1rem;
+      fill: #30af02; }
