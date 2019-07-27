@@ -87,8 +87,15 @@ body {
   padding: 1.25rem;
   border-bottom: 1px solid black; }
 
+.section-home {
+  padding: 1.25rem 4rem; }
+
 .section-features {
   padding: 5rem 0rem; }
+
+.section-HIW {
+  padding: 4rem;
+  background-color: #f4f4f4; }
 
 /* ------------------------------- */
 /* Section Home */
@@ -184,3 +191,41 @@ body {
       width: 7rem;
       margin-bottom: 1rem;
       fill: #30af02; }
+
+/* ------------------------------- */
+/* How It Works Section */
+/* ------------------------------- */
+.HIW {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -5rem; }
+  .HIW__app {
+    margin-right: 4rem;
+    margin-top: 5rem; }
+    .HIW__app__img {
+      width: 22rem; }
+  .HIW__steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-top: 5rem; }
+  .HIW__step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem; }
+    .HIW__step__number {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 400;
+      width: 5rem;
+      color: #127a00;
+      border-right: 3px solid #127a00;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 1.5rem;
+      flex-shrink: 0; }
+    .HIW__step__desc {
+      display: inline;
+      font-size: 2.2rem; }

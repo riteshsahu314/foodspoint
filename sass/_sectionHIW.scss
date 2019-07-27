@@ -1,0 +1,54 @@
+/* ------------------------------- */
+/* How It Works Section */
+/* ------------------------------- */
+
+.HIW {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -5rem;
+
+    &__app {
+        margin-right: 4rem;
+        margin-top: 5rem;
+
+        &__img {
+            width: 22rem;
+        }
+    }
+
+    
+    &__steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 4rem; 
+        margin-top: 5rem;
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        &__number {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 400;
+            width: 5rem;
+            color: $color-primary-dark;
+            border-right: 3px solid $color-primary-dark;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        &__desc {
+            display: inline;
+            font-size: 2.2rem;
+        }
+
+    }
+
+}
