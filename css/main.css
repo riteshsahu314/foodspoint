@@ -90,8 +90,7 @@ body {
 
 .section {
   width: 100%;
-  padding: 1.25rem;
-  border-bottom: 1px solid black; }
+  padding: 1.25rem; }
 
 .section-home {
   padding: 1.25rem 4rem; }
@@ -312,3 +311,50 @@ textarea {
 
 .form-btn {
   justify-self: left; }
+
+.footer {
+  background-color: #333;
+  padding: 5rem 5rem 2rem 5rem; }
+
+.footer-nav {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  color: #777;
+  list-style: none; }
+  .footer-nav__item {
+    padding: 0 2rem; }
+    .footer-nav__item > a:link, .footer-nav__item > a:visited {
+      text-decoration: none;
+      color: #777;
+      transition: all .3s; }
+    .footer-nav__item > a:hover {
+      color: white; }
+
+.footer-links {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: space-between; }
+
+.social-links {
+  display: flex; }
+  .social-links > li {
+    padding: 0 1rem; }
+  .social-links__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #777;
+    transition: all .3s; }
+    .social-links__icon--facebook:hover {
+      fill: #3b5998; }
+    .social-links__icon--twitter:hover {
+      fill: #1da1f2; }
+    .social-links__icon--google:hover {
+      fill: #dd4b39; }
+    .social-links__icon--instagram:hover {
+      fill: #405de6; }
+
+.copyright-text {
+  color: #777;
+  font-size: 1.8rem;
+  text-align: center; }
