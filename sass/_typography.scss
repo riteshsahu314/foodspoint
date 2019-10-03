@@ -11,9 +11,13 @@
     font-family: $font-display;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 4rem;
+    }
 
     &::after {
         content: "";
@@ -34,13 +38,13 @@
 }
 
 .heading-4 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
 .long-copy {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 70%;
     margin: 0 auto;
     line-height: 3.5rem;

@@ -21,8 +21,12 @@
 }
 
 .section-HIW {
-    padding: 4rem;
+    padding: 4rem 0rem;
     background-color: #fff;
+
+    @include breakpoint(md) {
+        padding: 4rem;
+    }
 }
 
 .section-testimonials {

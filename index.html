@@ -11,18 +11,24 @@
 </head>
 
 <body class="container">
-    <section class="section section-home">
+    <section class="section section-home js--section-home">
         <header class="header">
             <div class="header__logo">
-                <img src="img/logo.svg" alt="FoodsPoint Logo" class="header__logo-img">
+                <a href="/">
+                    <img src="img/logo.svg" alt="FoodsPoint Logo" class="header__logo-img">
+                </a>
             </div>
+
+            <label class="main-nav__button js--nav-button">
+                <span class="main-nav__button__icon"></span>
+            </label>
     
-            <nav>
-                <ul class="main-nav">
-                    <li class="main-nav__item"><a href="#">Food Delivery</a></li>
-                    <li class="main-nav__item"><a href="#">How it works</a></li>
-                    <li class="main-nav__item"><a href="#">Our Cities</a></li>
-                    <li class="main-nav__item"><a href="#">Sign up</a></li>
+            <nav class="main-nav-container js--nav-container">
+                <ul class="main-nav js--main-nav">
+                    <li class="main-nav__item"><a class="js--nav-item" href="#features">Food Delivery</a></li>
+                    <li class="main-nav__item"><a class="js--nav-item" href="#hiw">How it works</a></li>
+                    <li class="main-nav__item"><a class="js--nav-item" href="#testimonials">Testimonials</a></li>
+                    <li class="main-nav__item"><a class="js--nav-item" href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -51,7 +57,7 @@
         </div>
     </section>
 
-    <section class="section section-features">
+    <section class="section section-features" id="features">
         <div class="text-center mb-6">
             <h2 class="heading-2">Get dilicious and healthy food</h2>
             <p class="long-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium mollitia quod aut unde. Nobis veniam quos adipisci sed odio fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -92,7 +98,7 @@
         </div>
     </section>
 
-    <section class="section section-HIW">
+    <section class="section section-HIW" id="hiw">
         <div class="mb-3">
             <h2 class="heading-2">How it works</h2>
         </div>
@@ -121,7 +127,7 @@
         </div>
     </section>
 
-    <section class="section section-testimonials">
+    <section class="section section-testimonials" id="testimonials">
         <div class="u-margin-bottom-6">
             <h2 class="heading-2">What Our Customers Say</h2>
         </div>
@@ -142,7 +148,7 @@
             </div>
             <div class="testimonials__customer">
                 <div class="quote"></div>
-                <div class="testimonials__customer__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur deserunt provident eaque quas alias rerum temporibus, sint unde. Ducimus.</div>
+                <div class="testimonials__customer__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur deserunt provident eaque quas alias rerum temporibus, sint unde.</div>
                 <div class="testimonials__customer__info">
                     <img src="img/customer-3.jpg" alt="Photo by Michael Dam on Unsplash">
                 </div>
@@ -150,7 +156,7 @@
         </div>
     </section>
 
-    <section class="section section-form">
+    <section class="section section-form" id="contact">
         <div class="u-margin-bottom-6">
             <h2 class="heading-2">WE'RE HAPPY TO HEAR FROM YOU</h2>
         </div>
@@ -233,6 +239,10 @@
             <p class="copyright-text">Copyright &copy; 2019 by Ritesh Sahu. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

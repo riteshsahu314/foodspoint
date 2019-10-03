@@ -3,9 +3,9 @@
 /* HEADER */
 /* ------------------------------- */
 .header {    
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    flex-wrap: wrap;
+    grid-template-columns: auto auto;
     padding: 3rem;
     margin-bottom: 1rem;
 
@@ -33,20 +33,51 @@
 /* ------------------------------- */
 /* MAIN NAVIGATION */
 /* ------------------------------- */
+.main-nav-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 3;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        display: flex;
+        grid-column: auto;
+    }
+}
+
 .main-nav {
     margin-left: 2rem;
-    display: flex;
+    display: block;
     margin-top: 1rem;
     list-style: none;
     font-size: 2.1rem;
     font-weight: 400;
     letter-spacing: .1rem;
+    width: 100%;
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
 
     // navigation items
     &__item {
-        display: inline-block;
+        display: block;
         margin: 1rem;
         white-space: nowrap;
+        transition: background .3s;
+
+        @include breakpoint(lg) {
+            display: inline-block;
+        }
+
+        &:hover {
+            background: rgb(235, 235, 235);
+
+            @include breakpoint(lg) {
+                background: #fff;;
+            }
+        }
         
         & > a {
             padding: 8px 0;
@@ -55,16 +86,125 @@
             &:visited {
                 color: black;
                 text-decoration: none;
-                border-bottom: 2px solid transparent;
                 transition: border-bottom .2s, padding .2s;
+                border-bottom: 0px;
+
+                @include breakpoint(lg) {
+                    border-bottom: 2px solid transparent;
+                }
             }
 
             &:hover,
             &:active {
-                border-bottom: 2px solid $color-primary;
-                padding-bottom: 5px;
+                border-bottom: 0px;                
+
+                @include breakpoint(lg) {
+                    border-bottom: 2px solid $color-primary;
+                    padding-bottom: 5px;
+                }
             }
         }
     }
+
+    &__button {
+        display: block;
+        cursor: pointer;
+        align-self: center;
+
+        @include breakpoint(lg) {
+            display: none;
+        }
+
+        &__icon {
+            position: relative;
+
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: darken($color-grey-dark, 20%);
+                display: inline-block;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+
+            &::before { top: -.8rem; }
+
+            &::after { top: .8rem; }
+        }
+
+        &--active &__icon {
+            background-color: transparent;
+        }
+
+        &--active &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &--active &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
     
+}
+
+
+/* ------------------------------- */
+/* STICKY NAVIGATION */
+/* ------------------------------- */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px #efefef;
+    padding: 0.5rem 6rem;
+    z-index: 9999;
+
+    // header logo container
+    & .header__logo {
+        display: flex;
+        align-items: center;
+        
+        // logo image
+        &-img {
+            height: 4rem;
+            fill: $color-primary;
+        }
+    
+        // logo text
+        &-text {
+            align-self: center;
+            font-family: $font-display;
+            font-size: 3rem;
+            color: $color-primary;
+            margin-left: 1rem;
+        }
+    }
+
+    & .main-nav {
+        margin-top: 0;
+        font-size: 2rem;
+        & li {
+            &:hover,
+            &:active {
+                padding-bottom: 18px;
+            }
+        }
+    }
+}
+
+.sticky + .app-show {
+    margin-top: 11rem;
 }

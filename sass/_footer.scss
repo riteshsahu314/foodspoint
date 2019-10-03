@@ -1,6 +1,10 @@
 .footer {
     background-color: $color-grey-dark-3;
-    padding: 5rem 5rem 2rem 5rem;
+    padding: 2rem 2rem 2rem 2rem;
+
+    @include breakpoint(md) {
+        padding: 5rem 5rem 2rem 5rem;
+    }
 }
 
 .footer-nav {
@@ -9,9 +13,19 @@
     font-size: 1.8rem;
     color: $color-grey-dark;
     list-style: none;
+    margin-bottom: 2rem;
+
+    @include breakpoint(md) {
+        margin-bottom: 0rem;
+    }
     
     &__item {
-        padding: 0 2rem;
+        padding: 0 1rem;
+        white-space: nowrap;
+
+        @include breakpoint(md) {
+            padding: 0 2rem;
+        }
 
         & > a {
             &:link, &:visited {
@@ -28,16 +42,33 @@
 }
 
 .footer-links {
-    display: flex;
-    margin-bottom: 3rem;
+    display: block;
+    margin-bottom: 2rem;
     justify-content: space-between;
+
+    @include breakpoint(md) {
+        display: flex;
+        margin-bottom: 3rem;
+    }
 }
 
 .social-links {
     display: flex;
+    list-style: none;
+    justify-content: center;
 
     & > li {
         padding: 0 1rem;
+
+        & > a {
+            &:link, &:visited {
+                text-decoration: none;
+            }
+        }
+    }
+
+    @include breakpoint(md) {
+        justify-content: flex-start;
     }
 
     &__icon {

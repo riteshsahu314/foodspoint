@@ -1,8 +1,16 @@
 .contact-form {
     font-size: 2.3rem;
     display: grid;
-    width: 65%;
+    width: 90%;
     margin: 0 auto;
+
+    @include breakpoint(md) {
+        width: 75%;
+    }
+
+    @include breakpoint(lg) {
+        width: 65%;
+    }
 
     &__row {
         display: grid;
