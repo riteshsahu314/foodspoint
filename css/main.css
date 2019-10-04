@@ -16,8 +16,7 @@ body {
   font-weight: 300;
   color: #333;
   line-height: 1.6;
-  overflow-x: hidden;
-  display: none; }
+  overflow-x: hidden; }
 
 a, label {
   -webkit-touch-callout: none;
@@ -300,7 +299,8 @@ a, label {
 .app-show {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  opacity: 0; }
   .app-show__left {
     margin-right: 0rem;
     text-align: center; }

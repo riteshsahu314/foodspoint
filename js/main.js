@@ -1,6 +1,4 @@
-$(window).on("load", function() {
-    $("body").show();
-
+$(document).ready(function() {
     // Sticky Navigation
     $('.js--section-home').waypoint(function(direction) {
         if (direction == 'down') {
@@ -81,8 +79,11 @@ $(window).on("load", function() {
     /* ------------------------------- */
 
     // section home
-    $('.js--animate-1').addClass('animated bounceInLeft');
-    $('.js--animate-2').addClass('animated bounceInRight');
+    $('.app-show__left img').on("load", function() {
+        $('.app-show').css('opacity', '1');
+        $('.js--animate-1').addClass('animated bounceInLeft');
+        $('.js--animate-2').addClass('animated bounceInRight');
+    });
 
     // section features
     $('.js--animate-3').waypoint(function(direction) {
@@ -104,7 +105,7 @@ $(window).on("load", function() {
                 }, 1000); 
             }, 1000); 
         }, 1000);
-      
+    
     }, {
         offset: '80%'
     });
@@ -115,6 +116,5 @@ $(window).on("load", function() {
     }, {
         offset: '80%'
     });
-
 
 });
