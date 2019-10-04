@@ -10,13 +10,16 @@
 .footer-nav {
     display: flex;
     flex-shrink: 0;
-    font-size: 1.8rem;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
     color: $color-grey-dark;
     list-style: none;
     margin-bottom: 2rem;
+    justify-content: center;
 
     @include breakpoint(md) {
         margin-bottom: 0rem;
+        font-size: 1.8rem;
     }
     
     &__item {
@@ -97,6 +100,10 @@
 
 .copyright-text {
     color: $color-grey-dark;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 1.8rem;
+    }
 }

@@ -1,11 +1,12 @@
 .contact-form {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
     display: grid;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 
     @include breakpoint(md) {
         width: 75%;
+        font-size: 2.3rem;
     }
 
     @include breakpoint(lg) {
@@ -21,13 +22,18 @@
 
 input[type=text], input[type=email],
 select, textarea {
-    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
     color: inherit;
-    padding: 3px 10px;
+    padding: 5px 8px;
     border-radius: 3px;
     border: 1px solid #afafaf;
     width: 100%;
-    font-size: inherit;
+
+    @include breakpoint(md) {
+        padding: 3px 10px;
+        font-size: 2rem;
+    }
 }
 
 textarea {

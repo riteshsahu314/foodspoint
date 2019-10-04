@@ -12,11 +12,15 @@
 }
 
 .section-home {
-    padding: 1.25rem 4rem;
+    padding: 1.25rem 1rem;
+
+    @include breakpoint(md) {
+        padding: 1.25rem 4rem;
+    }
 }
 
 .section-features {
-    padding: 5rem 0rem;
+    padding: 5rem 0.5rem;
     background-color: #f5f5f5;
 }
 

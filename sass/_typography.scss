@@ -3,8 +3,12 @@
 /* ------------------------------- */
 .heading-1 {
     font-family: $font-display;
-    font-size: 8rem;
+    font-size: 5rem;
     letter-spacing: 1px;
+
+    @include breakpoint(md) {
+        font-size: 8rem;
+    }
 }
 
 .heading-2 {
@@ -17,6 +21,7 @@
 
     @include breakpoint(md) {
         font-size: 4rem;
+        white-space: nowrap;
     }
 
     &::after {
@@ -32,9 +37,13 @@
 
 .heading-3 {
     font-family: $font-display;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(md) {
+        font-size: 3.5rem;
+    }
 }
 
 .heading-4 {
@@ -44,8 +53,13 @@
 }
 
 .long-copy {
-    font-size: 1.8rem;
-    width: 70%;
+    font-size: 1.6rem;
+    width: 90%;
     margin: 0 auto;
     line-height: 3.5rem;
+
+    @include breakpoint(md) {
+        width: 70%;
+        font-size: 1.8rem;
+    }
 }

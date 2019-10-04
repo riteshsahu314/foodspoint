@@ -6,8 +6,12 @@
     display: grid;
     justify-content: space-between;
     grid-template-columns: auto auto;
-    padding: 3rem;
+    padding: 1rem;
     margin-bottom: 1rem;
+
+    @include breakpoint(md) {
+        padding: 3rem;
+    }
 
     // header logo container
     &__logo {
@@ -15,8 +19,12 @@
         
         // logo image
         &-img {
-            height: 7rem;
+            height: 5rem;
             fill: $color-primary;
+
+            @include breakpoint(md) {
+                height: 7rem;
+            }
         }
     
         // logo text
@@ -169,8 +177,12 @@
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 2px #efefef;
-    padding: 0.5rem 6rem;
+    padding: 0.6rem 2rem;
     z-index: 9999;
+
+    @include breakpoint(md) {
+        padding: 0.5rem 6rem;
+    }
 
     // header logo container
     & .header__logo {

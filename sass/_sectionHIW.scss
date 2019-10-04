@@ -7,6 +7,11 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: -5rem;
+    padding: 0 1rem;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
 
     &__app {
         margin-top: 5rem;
@@ -16,7 +21,11 @@
         }
 
         &__img {
-            width: 22rem;
+            width: 18rem;
+
+            @include breakpoint(md) {
+                width: 22rem;
+            }
         }
     }
 
@@ -35,26 +44,39 @@
     &__step {
         display: flex;
         align-items: center;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+
+        @include breakpoint(md) {
+            margin-bottom: 4rem;
+        }
 
         &__number {
             display: inline-block;
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 400;
-            width: 5rem;
+            width: 4rem;
             color: $color-primary-dark;
             border-right: 3px solid $color-primary-dark;
             border-radius: 50%;
             text-align: center;
             margin-right: 1.5rem;
             flex-shrink: 0;
+
+            @include breakpoint(md) {
+                font-size: 3rem;
+                width: 5rem;
+            }
         }
 
         &__desc {
             display: inline;
-            font-size: 2.2rem;
-            word-spacing: 4px;
-            letter-spacing: 1px;
+            font-size: 1.6rem;
+
+            @include breakpoint(md) {
+                font-size: 2.2rem;
+                word-spacing: 4px;
+                letter-spacing: 1px;
+            }
         }
 
     }

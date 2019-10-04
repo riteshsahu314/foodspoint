@@ -1,19 +1,33 @@
 .features {
-    padding: 0 3rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
     grid-gap: 4rem;
-    margin: 0 6rem;
+
+    @include breakpoint(md) {
+        margin: 0 6rem;
+        padding: 0 3rem;
+    }
 
     &__box {
         font-size: 1.6rem;
         text-align: justify;
+
+        &__heading {
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(sm) {
+                display: block;
+            }
+        }
     
         &__icon {
             display: block;
             height: 5rem;
             width: 5rem;
             margin-bottom: 1rem;
+            margin-right: 2rem;
             fill: $color-primary;
         }
     }
