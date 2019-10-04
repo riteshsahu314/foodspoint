@@ -108,7 +108,7 @@
 
                 @include breakpoint(lg) {
                     border-bottom: 2px solid $color-primary;
-                    padding-bottom: 5px;
+                    padding-bottom: 10px;
                 }
             }
         }
@@ -208,10 +208,12 @@
     & .main-nav {
         margin-top: 0;
         font-size: 2rem;
-        & li {
+        & li > a {
             &:hover,
             &:active {
-                padding-bottom: 18px;
+                @include breakpoint(lg) {
+                    padding-bottom: 18px;
+                }
             }
         }
     }

@@ -11,6 +11,10 @@
     grid-gap: 3rem;
     grid-template-columns: 1fr;
 
+    @include breakpoint(sm) {
+        margin: 0rem 8rem;
+    }
+
     @include breakpoint(lg) {
         grid-template-columns: repeat(3, 1fr);
         margin: 0rem 10rem;
