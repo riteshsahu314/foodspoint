@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    // $('body').css('opacity', '1');
+
     // Sticky Navigation
     $('.js--section-home').waypoint(function(direction) {
         if (direction == 'down') {
@@ -79,11 +81,13 @@ $(document).ready(function() {
     /* ------------------------------- */
 
     // section home
-    $('.app-show__left img').on("load", function() {
+    $('.js--nav-container').addClass('animated fadeIn'); 
+
+    $('.app-show__left img').one("load", function() {
         $('.app-show').css('opacity', '1');
         $('.js--animate-1').addClass('animated bounceInLeft');
         $('.js--animate-2').addClass('animated bounceInRight');
-    });
+    }).attr('src', 'img/phone-app-1.png');;
 
     // section features
     $('.js--animate-3').waypoint(function(direction) {

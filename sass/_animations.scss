@@ -13,3 +13,11 @@
         opacity: 1;
     }
 }
+
+.js--nav-container {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+    }
+}
