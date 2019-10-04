@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(window).on("load", function() {
+    $("body").show();
+
     // Sticky Navigation
     $('.js--section-home').waypoint(function(direction) {
         if (direction == 'down') {
