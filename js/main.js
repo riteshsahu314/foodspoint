@@ -47,6 +47,10 @@ $(document).ready(function() {
           } else {
             var nav = $('.js--nav-container');
             nav.hide();
+
+            if (nav.hasClass('mob-nav')) {
+                $('.js--nav-button').removeClass('main-nav__button--active');
+            }
           }
     }); 
 
@@ -69,4 +73,46 @@ $(document).ready(function() {
             $('.js--nav-button').removeClass('main-nav__button--active');
         }
     });
+
+    /* ------------------------------- */
+    /* ANIMATIONS */
+    /* ------------------------------- */
+
+    // section home
+    $('.js--animate-1').addClass('animated bounceInLeft');
+    $('.js--animate-2').addClass('animated bounceInRight');
+
+    // section features
+    $('.js--animate-3').waypoint(function(direction) {
+        $('.js--animate-3').addClass('animated fadeIn');        
+    }, {
+        offset: '80%'
+    });
+
+    // section HIW
+    $('.js--animate-4').waypoint(function(direction) {
+        setTimeout(function(){
+            $('.js--animate-4').addClass('animated heartBeat');
+
+            setTimeout(function(){
+                $('.js--animate-5').addClass('animated heartBeat');
+
+                setTimeout(function(){
+                    $('.js--animate-6').addClass('animated heartBeat');
+                }, 1000); 
+            }, 1000); 
+        }, 1000);
+      
+    }, {
+        offset: '80%'
+    });
+
+    // section testimonials
+    $('.js--animate-7').waypoint(function(direction) {
+        $('.js--animate-7').addClass('animated zoomIn');
+    }, {
+        offset: '80%'
+    });
+
+
 });

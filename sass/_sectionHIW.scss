@@ -11,6 +11,7 @@
 
     @include breakpoint(md) {
         padding: 0;
+        flex-wrap: nowrap;
     }
 
     &__app {
@@ -35,8 +36,13 @@
         flex-direction: column;
         justify-content: center;
         margin-top: 5rem;
+        margin-left: 4rem; 
 
         @include breakpoint(md) {
+            margin-left: 0; 
+        }
+
+        @include breakpoint(lg) {
             margin-left: 4rem; 
         }
     }
